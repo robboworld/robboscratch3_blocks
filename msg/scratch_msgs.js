@@ -12552,7 +12552,7 @@ Blockly.ScratchMsgs.locales["ru"] =
     "OPERATORS_LETTEROF_APPLE": "а",
     "OPERATORS_LENGTH": "длина %1",
     "OPERATORS_CONTAINS": "%1 содержит %2?",
-    "OPERATORS_MOD": "%1 модуль %2",
+    "OPERATORS_MOD": "%1 остаток от деления %2",
     "OPERATORS_ROUND": "округлить %1",
     "OPERATORS_MATHOP": "%1 от %2",
     "OPERATORS_MATHOP_ABS": "модуль",
