@@ -63,6 +63,17 @@ CLOSURE_ROOT_NPM = os.path.join("node_modules")
 CLOSURE_LIBRARY_NPM = "google-closure-library"
 CLOSURE_COMPILER_NPM = "google-closure-compiler"
 
+def npm_closure_compiler_argv():
+  """Argv prefix to run google-closure-compiler from node_modules.
+
+  On Windows the bare name is not on PATH (WinError 2); npm's .bin uses
+  node .../cli.js — mirror that here.
+  """
+  cli_js = os.path.join("node_modules", "google-closure-compiler", "cli.js")
+  if os.path.isfile(cli_js):
+    return ["node", cli_js]
+  return ["google-closure-compiler"]
+
 def import_path(fullpath):
   """Import a file with full path specification.
   Allows one to import from any directory, something __import__ does not do.
@@ -119,7 +130,7 @@ window.BLOCKLY_DIR = (function() {
   if (!isNodeJS) {
     // Find name of current directory.
     var scripts = document.getElementsByTagName('script');
-    var re = new RegExp('(.+)[\/]blockly_uncompressed(_vertical|_horizontal|)\.js$');
+    var re = new RegExp('(.+)[/]blockly_uncompressed(_vertical|_horizontal|)\\.js$');
     for (var i = 0, script; script = scripts[i]; i++) {
       var match = re.exec(script.src);
       if (match) {
@@ -328,8 +339,8 @@ class Gen_compressed(threading.Thread):
       # Build the final args array by prepending google-closure-compiler to
       # dash_args and dropping any falsy members
       args = []
-      for group in [["google-closure-compiler"], dash_args]:
-        args.extend(filter(lambda item: item, group))
+      for group in [npm_closure_compiler_argv(), dash_args]:
+          args.extend(filter(lambda item: item, group))
 
       proc = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
       (stdout, stderr) = proc.communicate()
@@ -438,11 +449,11 @@ class Gen_compressed(threading.Thread):
 
       # Trim down Google's (and only Google's) Apache licences.
       # The Closure Compiler preserves these.
-      LICENSE = re.compile("""/\\*
+      LICENSE = re.compile(r"""/\*
 
  [\w ]+
 
- Copyright \\d+ Google Inc.
+ Copyright \d+ Google Inc.
  https://developers.google.com/blockly/
 
  Licensed under the Apache License, Version 2.0 \(the "License"\);
@@ -456,7 +467,7 @@ class Gen_compressed(threading.Thread):
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
  limitations under the License.
-\\*/""")
+\*/""")
       code = re.sub(LICENSE, "", code)
 
       stats = json_data["statistics"]
@@ -577,7 +588,7 @@ if __name__ == "__main__":
         closure_root, closure_library, "closure", "bin", "calcdeps.py"))
 
     # Sanity check the local compiler
-    test_args = [closure_compiler, os.path.join("build", "test_input.js")]
+    test_args = npm_closure_compiler_argv() + [os.path.join("build", "test_input.js")]
     test_proc = subprocess.Popen(test_args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     (stdout, _) = test_proc.communicate()
     #stdout=""
