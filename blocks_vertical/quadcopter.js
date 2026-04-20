@@ -74,7 +74,7 @@ Blockly.Blocks['copter_status'] = {
       "message0":  Blockly.Msg.COPTER_STATUS,
 
       "category": Blockly.Categories.quadcopter,
-      "extensions": ["colours_quadcopter", "output_number"]
+      "extensions": ["colours_quadcopter", "output_boolean"]
     });
   }
 };
