@@ -63,24 +63,6 @@ Blockly.Blocks['copter_stop'] = {
   }
 };
 
-Blockly.Blocks['copter_status'] = {
-  /**
-   * Block to land.
-   * @this Blockly.Block
-   */
-  init: function(locale) {
-
-    this.jsonInit({
-      "message0":  Blockly.Msg.COPTER_STATUS,
-
-      "category": Blockly.Categories.quadcopter,
-      "extensions": ["colours_quadcopter", "output_boolean"]
-    });
-  }
-};
-
-
-
 Blockly.Blocks['copter_fly_distance'] = {
   /**
    * Block to land.
@@ -399,10 +381,10 @@ Blockly.Blocks['copter_directions'] = {
           "type": "field_dropdown",
           "name": "COPTER_DIRECTIONS",
           "options": [
-            [Blockly.Msg.COPTER_DIRECTION_FORWARD,   'direction_forward'],
-            [Blockly.Msg.COPTER_DIRECTION_BACKWARD,  'direction_backward'],
-            [Blockly.Msg.COPTER_DIRECTION_LEFT,      'direction_left'],
-            [Blockly.Msg.COPTER_DIRECTION_RIGHT,     'direction_right']
+            [Blockly.Msg.COPTER_DIRECTION_FORWARD, Blockly.Msg.COPTER_DIRECTION_FORWARD],
+            [Blockly.Msg.COPTER_DIRECTION_BACKWARD, Blockly.Msg.COPTER_DIRECTION_BACKWARD],
+            [Blockly.Msg.COPTER_DIRECTION_LEFT, Blockly.Msg.COPTER_DIRECTION_LEFT],
+            [Blockly.Msg.COPTER_DIRECTION_RIGHT, Blockly.Msg.COPTER_DIRECTION_RIGHT]
           ]
         }
       ],
@@ -439,7 +421,7 @@ Blockly.Blocks['copter_set_direction'] = {
 
 Blockly.Blocks['copter_direction'] = {
   /**
-   * Block to land.
+   * Reporter: relative flight direction (forward/backward/left/right).
    * @this Blockly.Block
    */
   init: function(locale) {
@@ -448,7 +430,7 @@ Blockly.Blocks['copter_direction'] = {
       "message0":  Blockly.Msg.COPTER_DIRECTION,
 
       "category": Blockly.Categories.quadcopter,
-      "extensions": ["colours_quadcopter", "output_number"]
+      "extensions": ["colours_quadcopter", "output_string"]
     });
   }
 };
