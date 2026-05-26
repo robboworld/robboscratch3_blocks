@@ -64,15 +64,14 @@ Blockly.Blocks['copter_stop'] = {
 };
 
 Blockly.Blocks['copter_fly_distance'] = {
-  /**
-   * Block to land.
-   * @this Blockly.Block
-   */
   init: function(locale) {
-
     this.jsonInit({
       "message0":  Blockly.Msg.COPTER_FLY_DISTANCE,
       "args0": [
+        {
+          "type": "input_value",
+          "name": "DIRECTION"
+        },
         {
           "type": "input_value",
           "name": "METERS"
@@ -85,15 +84,14 @@ Blockly.Blocks['copter_fly_distance'] = {
 };
 
 Blockly.Blocks['copter_fly_time'] = {
-  /**
-   * Block to land.
-   * @this Blockly.Block
-   */
   init: function(locale) {
-
     this.jsonInit({
       "message0":  Blockly.Msg.COPTER_FLY_TIME,
       "args0": [
+        {
+          "type": "input_value",
+          "name": "DIRECTION"
+        },
         {
           "type": "input_value",
           "name": "SECONDS"
@@ -134,26 +132,6 @@ Blockly.Blocks['copter_fly_for_time_with_speed'] = {
   }
 };
 
-Blockly.Blocks['copter_fly_backward'] = {
-  /**
-   * Block to land.
-   * @this Blockly.Block
-   */
-  init: function(locale) {
-
-    this.jsonInit({
-      "message0":  Blockly.Msg.COPTER_FLY_BACKWARD,
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "CENTIMETERS"
-        }
-      ],
-      "category": Blockly.Categories.quadcopter,
-      "extensions": ["colours_quadcopter", "shape_statement"]
-    });
-  }
-};
 
 Blockly.Blocks['copter_change_x_by'] = {
   /**
@@ -431,6 +409,85 @@ Blockly.Blocks['copter_direction'] = {
 
       "category": Blockly.Categories.quadcopter,
       "extensions": ["colours_quadcopter", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_axes'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "COPTER_AXIS",
+          "options": [
+            ["X", "X"],
+            ["Y", "Y"],
+            ["Z", "Z"]
+          ]
+        }
+      ],
+      "colour": Blockly.Colours.quadcopter.secondary,
+      "colourSecondary": Blockly.Colours.quadcopter.secondary,
+      "colourTertiary": Blockly.Colours.quadcopter.tertiary,
+      "extensions": ["output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_change_axis_by'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0":  Blockly.Msg.COPTER_CHANGE_AXIS_BY,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "AXIS"
+        },
+        {
+          "type": "input_value",
+          "name": "DISTANCE_DELTA"
+        }
+      ],
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_battery'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0":  Blockly.Msg.COPTER_BATTERY,
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_is_flying'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0":  Blockly.Msg.COPTER_IS_FLYING,
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_set_speed'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0":  Blockly.Msg.COPTER_SET_SPEED,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SPEED"
+        }
+      ],
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "shape_statement"]
     });
   }
 };
