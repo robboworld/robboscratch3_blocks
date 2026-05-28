@@ -3314,25 +3314,25 @@ Blockly.ScratchMsgs.locales["de"] =
 
 
 ///////////////////////////////////////////
-//Otto
+//Dancing robot
 //////////////////////////////////////////
 
-"OTTO_MOVE_STYLE_WALK": "Otto move (walk) %1 steps %2 step duration %3",
-"OTTO_MOVE_STYLE_FLAPPING": "Otto move (flapping) %1 steps %2  duration %3 height %4 ",
-"OTTO_MOVE_STYLE_CRUSAITO": "Otto move (crusaito) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_WALK": "Dancing robot move (walk) %1 steps %2 step duration %3",
+"OTTO_MOVE_STYLE_FLAPPING": "Dancing robot move (flapping) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_CRUSAITO": "Dancing robot move (crusaito) %1 steps %2  duration %3 height %4 ",
 "OTTO_GET_DISTANCE":"Entfernung",
-"OTTO_MOONWALKER":          "Otto moonwalker %1 steps %2  duration %3 height %4 ",
-"OTTO_SHAKE_LEG":           "Otto shale leg %1 steps %2  duration %3",
-"OTTO_TURN":                "Otto turn %1 steps %2  duration %3",
-"OTTO_BEND":                "Otto bend %1 steps %2  duration %3",
-"OTTO_ASCENDING_TURN":      "Otto ascending turn steps %1  duration %2 height %3 ",
-"OTTO_JITTER":              "Otto jitter  steps %1  duration %2 height %3 ",
-"OTTO_TIPTOE_SWING":        "Otto tiptoe swing  steps %1  duration %2 height %3 ",
-"OTTO_SWING":               "Otto swing  steps %1  duration %2 height %3 ",
-"OTTO_UPDOWN":              "Otto updown  steps %1  duration %2 height %3 ",
-"OTTO_JUMP":                "Otto jump steps %1 step duration %2",
+"OTTO_MOONWALKER":          "Dancing robot moonwalker %1 steps %2  duration %3 height %4 ",
+"OTTO_SHAKE_LEG":           "Dancing robot shake leg %1 steps %2  duration %3",
+"OTTO_TURN":                "Dancing robot turn %1 steps %2  duration %3",
+"OTTO_BEND":                "Dancing robot bend %1 steps %2  duration %3",
+"OTTO_ASCENDING_TURN":      "Dancing robot ascending turn steps %1  duration %2 height %3 ",
+"OTTO_JITTER":              "Dancing robot jitter  steps %1  duration %2 height %3 ",
+"OTTO_TIPTOE_SWING":        "Dancing robot tiptoe swing  steps %1  duration %2 height %3 ",
+"OTTO_SWING":               "Dancing robot swing  steps %1  duration %2 height %3 ",
+"OTTO_UPDOWN":              "Dancing robot updown  steps %1  duration %2 height %3 ",
+"OTTO_JUMP":                "Dancing robot jump steps %1 step duration %2",
 
-"OTTO_MOVE_SERVO":          "Otto dreht %1 Servo in %2 Position %3",
+"OTTO_MOVE_SERVO":          "Dancing robot dreht %1 Servo in %2 Position %3",
 "OTTO_MOVE_SERVO_FOOT":     "LB:%1RB:%2LF:%3RF%4 in  position %5 bringen",
 "OTTO_MOVE_SERVO_HAND":     "LH:%1 RH:%2 in  position %3 bringen",
 "OTTO_TEXTT":               "Text anzeigen %1 %2",
@@ -3388,7 +3388,7 @@ Blockly.ScratchMsgs.locales["de"] =
  "CATEGORY_QUADCOPTER": "Quadcopter",
  "CATEGORY_ROBOT": "Roboter",
  "CATEGORY_LABORATORY": "Labor",
- "CATEGORY_OTTO": "Otto",
+ "CATEGORY_OTTO": "Dancing robot",
  "CATEGORY_ARDUINO": "Arduino"
 
 
@@ -4407,23 +4407,23 @@ Blockly.ScratchMsgs.locales["en"] =
 
 
 ///////////////////////////////////////////
-//Otto
+//Dancing robot
 //////////////////////////////////////////
 
-"OTTO_MOVE_STYLE_WALK": "Otto move (walk) %1 steps %2 step duration %3",
-"OTTO_MOVE_STYLE_FLAPPING": "Otto move (flapping) %1 steps %2  duration %3 height %4 ",
-"OTTO_MOVE_STYLE_CRUSAITO": "Otto move (crusaito) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_WALK": "Dancing robot move (walk) %1 steps %2 step duration %3",
+"OTTO_MOVE_STYLE_FLAPPING": "Dancing robot move (flapping) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_CRUSAITO": "Dancing robot move (crusaito) %1 steps %2  duration %3 height %4 ",
 "OTTO_GET_DISTANCE":"Distance",
-"OTTO_MOONWALKER":          "Otto moonwalker %1 steps %2  duration %3 height %4 ",
-"OTTO_SHAKE_LEG":           "Otto shale leg %1 steps %2  duration %3",
-"OTTO_TURN":                "Otto turn %1 steps %2  duration %3",
-"OTTO_BEND":                "Otto bend %1 steps %2  duration %3",
-"OTTO_ASCENDING_TURN":      "Otto ascending turn steps %1  duration %2 height %3 ",
-"OTTO_JITTER":              "Otto jitter  steps %1  duration %2 height %3 ",
-"OTTO_TIPTOE_SWING":        "Otto tiptoe swing  steps %1  duration %2 height %3 ",
-"OTTO_SWING":               "Otto swing  steps %1  duration %2 height %3 ",
-"OTTO_UPDOWN":              "Otto updown  steps %1  duration %2 height %3 ",
-"OTTO_JUMP":                "Otto jump steps %1 step duration %2",
+"OTTO_MOONWALKER":          "Dancing robot moonwalker %1 steps %2  duration %3 height %4 ",
+"OTTO_SHAKE_LEG":           "Dancing robot shake leg %1 steps %2  duration %3",
+"OTTO_TURN":                "Dancing robot turn %1 steps %2  duration %3",
+"OTTO_BEND":                "Dancing robot bend %1 steps %2  duration %3",
+"OTTO_ASCENDING_TURN":      "Dancing robot ascending turn steps %1  duration %2 height %3 ",
+"OTTO_JITTER":              "Dancing robot jitter  steps %1  duration %2 height %3 ",
+"OTTO_TIPTOE_SWING":        "Dancing robot tiptoe swing  steps %1  duration %2 height %3 ",
+"OTTO_SWING":               "Dancing robot swing  steps %1  duration %2 height %3 ",
+"OTTO_UPDOWN":              "Dancing robot updown  steps %1  duration %2 height %3 ",
+"OTTO_JUMP":                "Dancing robot jump steps %1 step duration %2",
 
 "OTTO_MOVE_SERVO":          "Dancing robot turn %1 servo in %2 position %3",
 "OTTO_MOVE_SERVO_FOOT":     "Set LL:%1RL:%2LF:%3RF%4 position %5",
@@ -10075,7 +10075,7 @@ Blockly.ScratchMsgs.locales["ja"] =
 "NEWCAT_SET_HUM":             "ピン %1 湿度センサー、ピン %2 温度センサーにする",
 "NEWCAT_SET_PULT":            "ピン %1 をリモコンにする",
 
-"OTTO_MOVE_SERVO":          "オットの%1 %2サーボモーターのポジションを%3にする",
+"OTTO_MOVE_SERVO":          "ダンシングロボットの%1 %2サーボモーターのポジションを%3にする",
 "OTTO_MOVE_SERVO_FOOT":     "LL%1、RL%2、LF%3、RF%4をポジション%5にする",
 "OTTO_MOVE_SERVO_HAND":     "LH%1、RH%2をポジション%3にする",
 "OTTO_TEXTT":               "テキスト%1を%2で表示する",
@@ -10090,7 +10090,7 @@ Blockly.ScratchMsgs.locales["ja"] =
 "NORMALLY":                 "普通",
 "FAST":                     "早い",
 "VERY_FAST":                "とても早い",
-"OTTO_MATRIX_PIX":          "オットマトリックスをピクセル%1 %2 %3にする",
+"OTTO_MATRIX_PIX":          "ダンシングロボットマトリックスをピクセル%1 %2 %3にする",
 "OTTO_LED":                 "鼻をR:%1G:%2B:%3にする",
 "OTTO_GET_HEAR":            "音のセンサー",
 "OTTO_PLAY_SOUND":          "%1の音符を%2の長さで鳴らす",
@@ -10109,7 +10109,7 @@ Blockly.ScratchMsgs.locales["ja"] =
   "CATEGORY_QUADCOPTER": "Quadcopter",
   "CATEGORY_ROBOT": "ロボット",
   "CATEGORY_LABORATORY": "ラボ",
-  "CATEGORY_OTTO": "オット",
+  "CATEGORY_OTTO": "ダンシングロボット",
   "CATEGORY_ARDUINO": "アルドゥイーノ"
 
 
@@ -12828,20 +12828,20 @@ Blockly.ScratchMsgs.locales["ru"] =
 
 
 
-"OTTO_MOVE_STYLE_WALK": "Otto move (walk) %1 steps %2 step duration %3",
-"OTTO_MOVE_STYLE_FLAPPING": "Otto move (flapping) %1 steps %2  duration %3 height %4 ",
-"OTTO_MOVE_STYLE_CRUSAITO": "Otto move (crusaito) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_WALK": "Танцующий робот: шаг (ходьба) %1 шагов %2 длительность шага %3",
+"OTTO_MOVE_STYLE_FLAPPING": "Танцующий робот: шаг (махи) %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_MOVE_STYLE_CRUSAITO": "Танцующий робот: шаг (crusaito) %1 шагов %2 длительность %3 высота %4 ",
 "OTTO_GET_DISTANCE":"Расстояние",
-"OTTO_MOONWALKER":          "Otto moonwalker %1 steps %2  duration %3 height %4 ",
-"OTTO_SHAKE_LEG":           "Otto shale leg %1 steps %2  duration %3",
-"OTTO_TURN":                "Otto turn %1 steps %2  duration %3",
-"OTTO_BEND":                "Otto bend %1 steps %2  duration %3",
-"OTTO_ASCENDING_TURN":      "Otto ascending turn steps %1  duration %2 height %3 ",
-"OTTO_JITTER":              "Otto jitter  steps %1  duration %2 height %3 ",
-"OTTO_TIPTOE_SWING":        "Otto tiptoe swing  steps %1  duration %2 height %3 ",
-"OTTO_SWING":               "Otto swing  steps %1  duration %2 height %3 ",
-"OTTO_UPDOWN":              "Otto updown  steps %1  duration %2 height %3 ",
-"OTTO_JUMP":                "Otto jump steps %1 step duration %2",
+"OTTO_MOONWALKER":          "Танцующий робот: лунная походка %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_SHAKE_LEG":           "Танцующий робот: трясти ногой %1 шагов %2 длительность %3",
+"OTTO_TURN":                "Танцующий робот: поворот %1 шагов %2 длительность %3",
+"OTTO_BEND":                "Танцующий робот: наклон %1 шагов %2 длительность %3",
+"OTTO_ASCENDING_TURN":      "Танцующий робот: восходящий поворот %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_JITTER":              "Танцующий робот: дрожание %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_TIPTOE_SWING":        "Танцующий робот: качание на носках %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_SWING":               "Танцующий робот: качание %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_UPDOWN":              "Танцующий робот: вверх-вниз %1 шагов %2 длительность %3 высота %4 ",
+"OTTO_JUMP":                "Танцующий робот: прыжок %1 шагов %2 длительность шага %3",
 
 "OTTO_MOVE_SERVO":          "Танцующий робот повернуть %1 серво в %2 позицию %3",
 "OTTO_MOVE_SERVO_FOOT":     "Установить ЛН:%1ПН:%2ЛС:%3ПС%4 в позицию %5",
@@ -14223,25 +14223,25 @@ Blockly.ScratchMsgs.locales["fi"] =
 
 
 ///////////////////////////////////////////
-//Otto
+//Dancing robot
 //////////////////////////////////////////
 
-"OTTO_MOVE_STYLE_WALK": "Otto move (walk) %1 steps %2 step duration %3",
-"OTTO_MOVE_STYLE_FLAPPING": "Otto move (flapping) %1 steps %2  duration %3 height %4 ",
-"OTTO_MOVE_STYLE_CRUSAITO": "Otto move (crusaito) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_WALK": "Dancing robot move (walk) %1 steps %2 step duration %3",
+"OTTO_MOVE_STYLE_FLAPPING": "Dancing robot move (flapping) %1 steps %2  duration %3 height %4 ",
+"OTTO_MOVE_STYLE_CRUSAITO": "Dancing robot move (crusaito) %1 steps %2  duration %3 height %4 ",
 "OTTO_GET_DISTANCE":"Distance",
-"OTTO_MOONWALKER":          "Otto moonwalker %1 steps %2  duration %3 height %4 ",
-"OTTO_SHAKE_LEG":           "Otto shale leg %1 steps %2  duration %3",
-"OTTO_TURN":                "Otto turn %1 steps %2  duration %3",
-"OTTO_BEND":                "Otto bend %1 steps %2  duration %3",
-"OTTO_ASCENDING_TURN":      "Otto ascending turn steps %1  duration %2 height %3 ",
-"OTTO_JITTER":              "Otto jitter  steps %1  duration %2 height %3 ",
-"OTTO_TIPTOE_SWING":        "Otto tiptoe swing  steps %1  duration %2 height %3 ",
-"OTTO_SWING":               "Otto swing  steps %1  duration %2 height %3 ",
-"OTTO_UPDOWN":              "Otto updown  steps %1  duration %2 height %3 ",
-"OTTO_JUMP":                "Otto jump steps %1 step duration %2",
+"OTTO_MOONWALKER":          "Dancing robot moonwalker %1 steps %2  duration %3 height %4 ",
+"OTTO_SHAKE_LEG":           "Dancing robot shake leg %1 steps %2  duration %3",
+"OTTO_TURN":                "Dancing robot turn %1 steps %2  duration %3",
+"OTTO_BEND":                "Dancing robot bend %1 steps %2  duration %3",
+"OTTO_ASCENDING_TURN":      "Dancing robot ascending turn steps %1  duration %2 height %3 ",
+"OTTO_JITTER":              "Dancing robot jitter  steps %1  duration %2 height %3 ",
+"OTTO_TIPTOE_SWING":        "Dancing robot tiptoe swing  steps %1  duration %2 height %3 ",
+"OTTO_SWING":               "Dancing robot swing  steps %1  duration %2 height %3 ",
+"OTTO_UPDOWN":              "Dancing robot updown  steps %1  duration %2 height %3 ",
+"OTTO_JUMP":                "Dancing robot jump steps %1 step duration %2",
 
-"OTTO_MOVE_SERVO":          "Otto turn %1 servo in %2 position %3",
+"OTTO_MOVE_SERVO":          "Dancing robot turn %1 servo in %2 position %3",
 "OTTO_MOVE_SERVO_FOOT":     "Set LL:%1RL:%2LF:%3RF%4 position %5",
 "OTTO_MOVE_SERVO_HAND":     "Set LH:%1 RH:%2 position %3",
 "OTTO_TEXTT":               "display text %1 %2",
@@ -14256,7 +14256,7 @@ Blockly.ScratchMsgs.locales["fi"] =
 "NORMALLY":                 "normally",
 "FAST":                     "fast",
 "VERY_FAST":                "very fast",
-"OTTO_MATRIX_PIX":          "Otto matrix set pixel %1 %2 %3",
+"OTTO_MATRIX_PIX":          "Dancing robot matrix set pixel %1 %2 %3",
 "OTTO_LED":                 "Nose R:%1 G:%2 B:%3",
 "OTTO_GET_HEAR":            "Sound",
 "OTTO_PLAY_SOUND":          "Play note %1 for %2",
@@ -14297,7 +14297,7 @@ Blockly.ScratchMsgs.locales["fi"] =
   "CATEGORY_QUADCOPTER": "Quadcopter",
   "CATEGORY_ROBOT": "Robotti",
   "CATEGORY_LABORATORY": "Laboratorio",
-  "CATEGORY_OTTO": "Otto",
+  "CATEGORY_OTTO": "Dancing robot",
   "CATEGORY_ARDUINO": "Arduino"
 };
 
@@ -15872,22 +15872,22 @@ Blockly.ScratchMsgs.locales["zh-cn"] =
     
     
     
-    "OTTO_MOVE_STYLE_WALK": "Otto move (walk) %1 steps %2 step duration %3",
-    "OTTO_MOVE_STYLE_FLAPPING": "Otto move (flapping) %1 steps %2  duration %3 height %4 ",
-    "OTTO_MOVE_STYLE_CRUSAITO": "Otto move (crusaito) %1 steps %2  duration %3 height %4 ",
+    "OTTO_MOVE_STYLE_WALK": "Dancing robot move (walk) %1 steps %2 step duration %3",
+    "OTTO_MOVE_STYLE_FLAPPING": "Dancing robot move (flapping) %1 steps %2  duration %3 height %4 ",
+    "OTTO_MOVE_STYLE_CRUSAITO": "Dancing robot move (crusaito) %1 steps %2  duration %3 height %4 ",
     "OTTO_GET_DISTANCE": "Distance",
-    "OTTO_MOONWALKER":          "Otto moonwalker %1 steps %2  duration %3 height %4 ",
-    "OTTO_SHAKE_LEG":           "Otto shale leg %1 steps %2  duration %3",
-    "OTTO_TURN":                "Otto turn %1 steps %2  duration %3",
-    "OTTO_BEND":                "Otto bend %1 steps %2  duration %3",
-    "OTTO_ASCENDING_TURN":      "Otto ascending turn steps %1  duration %2 height %3 ",
-    "OTTO_JITTER":              "Otto jitter  steps %1  duration %2 height %3 ",
-    "OTTO_TIPTOE_SWING":        "Otto tiptoe swing  steps %1  duration %2 height %3 ",
-    "OTTO_SWING":               "Otto swing  steps %1  duration %2 height %3 ",
-    "OTTO_UPDOWN":              "Otto updown  steps %1  duration %2 height %3 ",
-    "OTTO_JUMP":                "Otto jump steps %1 step duration %2",
+    "OTTO_MOONWALKER":          "Dancing robot moonwalker %1 steps %2  duration %3 height %4 ",
+    "OTTO_SHAKE_LEG":           "Dancing robot shake leg %1 steps %2  duration %3",
+    "OTTO_TURN":                "Dancing robot turn %1 steps %2  duration %3",
+    "OTTO_BEND":                "Dancing robot bend %1 steps %2  duration %3",
+    "OTTO_ASCENDING_TURN":      "Dancing robot ascending turn steps %1  duration %2 height %3 ",
+    "OTTO_JITTER":              "Dancing robot jitter  steps %1  duration %2 height %3 ",
+    "OTTO_TIPTOE_SWING":        "Dancing robot tiptoe swing  steps %1  duration %2 height %3 ",
+    "OTTO_SWING":               "Dancing robot swing  steps %1  duration %2 height %3 ",
+    "OTTO_UPDOWN":              "Dancing robot updown  steps %1  duration %2 height %3 ",
+    "OTTO_JUMP":                "Dancing robot jump steps %1 step duration %2",
     
-    "OTTO_MOVE_SERVO":          "Otto 将 %1 伺服旋转到 %2 位置 %3",
+    "OTTO_MOVE_SERVO":          "Dancing robot 将 %1 伺服旋转到 %2 位置 %3",
     "OTTO_MOVE_SERVO_FOOT":     "将左腿 %1 右腿 %2 左脚 %3 右脚 %4 设置为位置 %5",
     "OTTO_MOVE_SERVO_HAND":     "将左手 :%1 右手 :%2 设置为位置 %3",
     "OTTO_TEXTT":               "显示文本 %1 %2",
@@ -15967,7 +15967,7 @@ Blockly.ScratchMsgs.locales["zh-cn"] =
     
     
     
-    "CATEGORY_OTTO": "Otto",
+    "CATEGORY_OTTO": "Dancing robot",
     "CATEGORY_QUADCOPTER": "四轴飞行器",
     "CATEGORY_ROBOT": "机器人",
     "CATEGORY_LABORATORY": "实验室",
