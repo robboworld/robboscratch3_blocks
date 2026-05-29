@@ -333,7 +333,10 @@ Blockly.Blocks['copter_rotate'] = {
     this.jsonInit({
       "message0":  Blockly.Msg.COPTER_ROTATE,
       "args0": [
-
+        {
+          "type": "input_value",
+          "name": "SIDE"
+        },
         {
           "type": "input_value",
           "name": "DEGREES"
@@ -341,6 +344,34 @@ Blockly.Blocks['copter_rotate'] = {
       ],
       "category": Blockly.Categories.quadcopter,
       "extensions": ["colours_quadcopter", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_turn_sides'] = {
+  /**
+   * Dropdown reporter: turn left / right (grey slot, like copter_directions).
+   * @this Blockly.Block
+   */
+  init: function(locale) {
+
+    this.jsonInit({
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "COPTER_TURN_SIDE",
+          "options": [
+            [Blockly.Msg.COPTER_TURN_SIDE_RIGHT, 'right'],
+            [Blockly.Msg.COPTER_TURN_SIDE_LEFT, 'left']
+          ]
+        }
+      ],
+
+      "colour": Blockly.Colours.quadcopter.secondary,
+      "colourSecondary": Blockly.Colours.quadcopter.secondary,
+      "colourTertiary": Blockly.Colours.quadcopter.tertiary,
+      "extensions": ["output_string"]
     });
   }
 };
@@ -488,6 +519,16 @@ Blockly.Blocks['copter_set_speed'] = {
       ],
       "category": Blockly.Categories.quadcopter,
       "extensions": ["colours_quadcopter", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_speed'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0":  Blockly.Msg.COPTER_SPEED,
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "output_number"]
     });
   }
 };

@@ -3300,7 +3300,7 @@ Blockly.ScratchMsgs.locales["de"] =
 "COPTER_YAW":"Drehwinkel (°)",
 "COPTER_FLY_FOR_SECONDS_TO_COORDS":"Fly %1 seconds to x: %2 y: %3 z: %4 (meters)",
 "COPTER_FLY_TO_COORDS":"Fly to x: %1 y: %2 z: %3 (meters)",
-"COPTER_ROTATE":"Rotate %1 degrees",
+"COPTER_ROTATE":"Turn %1 %2 degrees",
 "COPTER_SET_DIRECTION":"Set direction to %1",
 "COPTER_DIRECTION":"Richtung",
 "COPTER_STOP":"Notfall-Stopp!",
@@ -3311,6 +3311,9 @@ Blockly.ScratchMsgs.locales["de"] =
 "COPTER_BATTERY":"Akku (%)",
 "COPTER_IS_FLYING":"fliegt?",
 "COPTER_SET_SPEED":"Geschwindigkeit setzen %1 m/s",
+"COPTER_SPEED":"Geschwindigkeit (m/s)",
+"COPTER_TURN_SIDE_LEFT":"links",
+"COPTER_TURN_SIDE_RIGHT":"rechts",
 
 
 ///////////////////////////////////////////
@@ -4393,17 +4396,20 @@ Blockly.ScratchMsgs.locales["en"] =
 "COPTER_YAW":"rotation angle (°)",
 "COPTER_FLY_FOR_SECONDS_TO_COORDS":"Fly %1 seconds to x: %2 y: %3 z: %4 (meters)",
 "COPTER_FLY_TO_COORDS":"Fly to x: %1 y: %2 z: %3 (meters)",
-"COPTER_ROTATE":"Rotate %1 degrees",
+"COPTER_ROTATE":"Turn %1 %2 degrees",
 "COPTER_SET_DIRECTION":"Set direction to %1",
 "COPTER_DIRECTION":"direction",
 "COPTER_STOP":"Emergency stop!",
-"COPTER_DIRECTION_FORWARD":"Forward",
-"COPTER_DIRECTION_BACKWARD":"Backward",
-"COPTER_DIRECTION_LEFT":"Left",
-"COPTER_DIRECTION_RIGHT":"Right",
+"COPTER_DIRECTION_FORWARD":"forward",
+"COPTER_DIRECTION_BACKWARD":"backward",
+"COPTER_DIRECTION_LEFT":"left",
+"COPTER_DIRECTION_RIGHT":"right",
 "COPTER_BATTERY":"battery (%)",
 "COPTER_IS_FLYING":"flying?",
 "COPTER_SET_SPEED":"set speed %1 m/s",
+"COPTER_SPEED":"speed (m/s)",
+"COPTER_TURN_SIDE_LEFT":"left",
+"COPTER_TURN_SIDE_RIGHT":"right",
 
 
 ///////////////////////////////////////////
@@ -12813,18 +12819,21 @@ Blockly.ScratchMsgs.locales["ru"] =
 "COPTER_YAW":"угол поворота (°)",
 "COPTER_FLY_FOR_SECONDS_TO_COORDS":"Лететь %1 секунд к x: %2 y: %3 z: %4 (метры)",
 "COPTER_FLY_TO_COORDS":"Лететь к x: %1 y: %2 z: %3 (метры)",
-"COPTER_ROTATE":"Повернуть на %1 градусов",
+"COPTER_ROTATE":"Повернуть %1 на %2 градусов",
 "COPTER_SET_DIRECTION":"Установить направление %1",
 "COPTER_DIRECTION":"направление",
 "COPTER_STOP":"Аварийный стоп!",
-"COPTER_DIRECTION_FORWARD":"Вперёд",
-"COPTER_DIRECTION_BACKWARD":"Назад",
-"COPTER_DIRECTION_LEFT":"Налево",
-"COPTER_DIRECTION_RIGHT":"Направо",
+"COPTER_DIRECTION_FORWARD":"вперёд",
+"COPTER_DIRECTION_BACKWARD":"назад",
+"COPTER_DIRECTION_LEFT":"налево",
+"COPTER_DIRECTION_RIGHT":"направо",
 "COPTER_FLY_UP":"Взлёт",
 "COPTER_BATTERY":"заряд батареи (%)",
 "COPTER_IS_FLYING":"в полёте?",
 "COPTER_SET_SPEED":"установить скорость %1 м/с",
+"COPTER_SPEED":"скорость (м/с)",
+"COPTER_TURN_SIDE_LEFT":"налево",
+"COPTER_TURN_SIDE_RIGHT":"направо",
 
 
 
@@ -14209,7 +14218,7 @@ Blockly.ScratchMsgs.locales["fi"] =
 "COPTER_YAW":"rotation angle (°)",
 "COPTER_FLY_FOR_SECONDS_TO_COORDS":"Fly %1 seconds to x: %2 y: %3 z: %4 (meters)",
 "COPTER_FLY_TO_COORDS":"Fly to x: %1 y: %2 z: %3 (meters)",
-"COPTER_ROTATE":"Rotate %1 degrees",
+"COPTER_ROTATE":"Turn %1 %2 degrees",
 "COPTER_SET_DIRECTION":"Set direction to %1",
 "COPTER_DIRECTION":"direction",
 "COPTER_STOP":"Emergency stop!",
@@ -14220,6 +14229,9 @@ Blockly.ScratchMsgs.locales["fi"] =
 "COPTER_BATTERY":"battery (%)",
 "COPTER_IS_FLYING":"flying?",
 "COPTER_SET_SPEED":"set speed %1 m/s",
+"COPTER_SPEED":"speed (m/s)",
+"COPTER_TURN_SIDE_LEFT":"left",
+"COPTER_TURN_SIDE_RIGHT":"right",
 
 
 ///////////////////////////////////////////
@@ -15857,7 +15869,7 @@ Blockly.ScratchMsgs.locales["zh-cn"] =
     "COPTER_YAW":"旋转角度（°）",
     "COPTER_FLY_FOR_SECONDS_TO_COORDS":"飞 %1 秒到 X: %2 Y: %3 Z: %4 (米)",
     "COPTER_FLY_TO_COORDS":"飞到 X: %1 Y: %2 Z: %3 (米)",
-    "COPTER_ROTATE":"旋转 %1 度",
+    "COPTER_ROTATE":"旋转 %1 %2 度",
     "COPTER_SET_DIRECTION":"设置方向 %1",
     "COPTER_DIRECTION":"方向",
     "COPTER_STOP":"紧急停止",
@@ -15869,6 +15881,9 @@ Blockly.ScratchMsgs.locales["zh-cn"] =
     "COPTER_BATTERY":"电量 (%)",
     "COPTER_IS_FLYING":"飞行中?",
     "COPTER_SET_SPEED":"设置速度 %1 米/秒",
+    "COPTER_SPEED":"速度 (米/秒)",
+    "COPTER_TURN_SIDE_LEFT":"向左",
+    "COPTER_TURN_SIDE_RIGHT":"向右",
     
     
     
