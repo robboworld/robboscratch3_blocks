@@ -393,7 +393,9 @@ Blockly.Blocks['copter_directions'] = {
             [Blockly.Msg.COPTER_DIRECTION_FORWARD, Blockly.Msg.COPTER_DIRECTION_FORWARD],
             [Blockly.Msg.COPTER_DIRECTION_BACKWARD, Blockly.Msg.COPTER_DIRECTION_BACKWARD],
             [Blockly.Msg.COPTER_DIRECTION_LEFT, Blockly.Msg.COPTER_DIRECTION_LEFT],
-            [Blockly.Msg.COPTER_DIRECTION_RIGHT, Blockly.Msg.COPTER_DIRECTION_RIGHT]
+            [Blockly.Msg.COPTER_DIRECTION_RIGHT, Blockly.Msg.COPTER_DIRECTION_RIGHT],
+            [Blockly.Msg.COPTER_DIRECTION_UP, Blockly.Msg.COPTER_DIRECTION_UP],
+            [Blockly.Msg.COPTER_DIRECTION_DOWN, Blockly.Msg.COPTER_DIRECTION_DOWN]
           ]
         }
       ],
