@@ -12836,8 +12836,8 @@ Blockly.ScratchMsgs.locales["ru"] =
 "COPTER_IS_FLYING":"в полёте?",
 "COPTER_SET_SPEED":"установить скорость %1 м/с",
 "COPTER_SPEED":"скорость (м/с)",
-"COPTER_TURN_SIDE_LEFT":"налево",
-"COPTER_TURN_SIDE_RIGHT":"направо",
+"COPTER_TURN_SIDE_LEFT":"влево",
+"COPTER_TURN_SIDE_RIGHT":"вправо",
 
 
 
