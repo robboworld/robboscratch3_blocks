@@ -43,7 +43,7 @@ Blockly.Blocks['note2'] = {
       "args0": [
         {
           "type": "field_note2",
-          "name": "NOTE",
+          "name": "NUM",
           "value": 60
         }
       ],
