@@ -469,10 +469,10 @@ Blockly.Blocks['copter_axes'] = {
   }
 };
 
-Blockly.Blocks['copter_change_axis_by'] = {
+Blockly.Blocks['copter_move_axis_to'] = {
   init: function(locale) {
     this.jsonInit({
-      "message0":  Blockly.Msg.COPTER_CHANGE_AXIS_BY,
+      "message0":  Blockly.Msg.COPTER_MOVE_AXIS_TO,
       "args0": [
         {
           "type": "input_value",
@@ -480,7 +480,7 @@ Blockly.Blocks['copter_change_axis_by'] = {
         },
         {
           "type": "input_value",
-          "name": "DISTANCE_DELTA"
+          "name": "COORD"
         }
       ],
       "category": Blockly.Categories.quadcopter,

@@ -115,7 +115,7 @@
   "COPTER_CHANGE_X_BY": "Cambiar x en %1 metros",
   "COPTER_CHANGE_Y_BY": "Cambiar y en %1 metros",
   "COPTER_CHANGE_Z_BY": "Cambiar z en %1 metros",
-  "COPTER_CHANGE_AXIS_BY": "Moverse a lo largo del eje %1 %2 metros",
+  "COPTER_MOVE_AXIS_TO": "Volar por el eje %1 a %2 (metros)",
   "COPTER_X_COORD": "posición X (m)",
   "COPTER_Y_COORD": "posición Y (m)",
   "COPTER_Z_COORD": "altitud (m)",
