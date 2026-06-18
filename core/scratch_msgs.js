@@ -55,7 +55,8 @@ Blockly.ScratchMsgs.currentLocale_ = 'en';
 Blockly.ScratchMsgs.setLocale = function(locale) {
   if (Object.keys(Blockly.ScratchMsgs.locales).includes(locale)) {
     Blockly.ScratchMsgs.currentLocale_ = locale;
-    Blockly.Msg = Object.assign({}, Blockly.Msg, Blockly.ScratchMsgs.locales[locale]);
+    var enMessages = Blockly.ScratchMsgs.locales['en'] || {};
+    Blockly.Msg = Object.assign({}, enMessages, Blockly.ScratchMsgs.locales[locale]);
   } else {
     // keep current locale
     console.warn('Ignoring unrecognized locale: ' + locale);
