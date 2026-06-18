@@ -13,7 +13,8 @@
   "browser": "./shim/vertical.js",
   "scripts": {
     "deploy": "rimraf gh-pages/closure-library/scripts/ci/CloseAdobeDialog.exe && gh-pages -t -d gh-pages -m \"Build for $(git log --pretty=format:%H -n1)\"",
-    "build": "node scripts/run-build-py.js && webpack",
+    "build": "node scripts/run-build-py.js && node scripts/run-webpack-if-needed.js",
+    "build:force": "BLOCKS_BUILD_FORCE=1 npm run build",
     "build:playgrounds": "webpack --config webpack.playgrounds.js",
     "prepublish": "npm run build",
     "test:setup": "tests/scripts/test_setup.sh",
