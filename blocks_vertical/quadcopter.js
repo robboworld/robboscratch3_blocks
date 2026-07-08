@@ -260,6 +260,16 @@ Blockly.Blocks['copter_yaw'] = {
   }
 };
 
+Blockly.Blocks['copter_reset_local_position'] = {
+  init: function(locale) {
+    this.jsonInit({
+      "message0": Blockly.Msg.COPTER_RESET_LOCAL_POSITION,
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['copter_fly_for_seconds_to_coords'] = {
   /**
    * Block to land.

@@ -3314,6 +3314,7 @@ Blockly.ScratchMsgs.locales["de"] =
 "COPTER_SPEED":"Geschwindigkeit (m/s)",
 "COPTER_TURN_SIDE_LEFT":"links",
 "COPTER_TURN_SIDE_RIGHT":"rechts",
+"COPTER_RESET_LOCAL_POSITION":"X/Y-Position zurücksetzen",
 
 
 ///////////////////////////////////////////
@@ -4412,6 +4413,7 @@ Blockly.ScratchMsgs.locales["en"] =
 "COPTER_SPEED":"speed (m/s)",
 "COPTER_TURN_SIDE_LEFT":"left",
 "COPTER_TURN_SIDE_RIGHT":"right",
+"COPTER_RESET_LOCAL_POSITION":"Reset X and Y position",
 
 
 ///////////////////////////////////////////
@@ -4948,6 +4950,7 @@ Blockly.ScratchMsgs.locales["es"] =
     "COPTER_SPEED": "velocidad (m/s)",
     "COPTER_TURN_SIDE_LEFT": "izquierda",
     "COPTER_TURN_SIDE_RIGHT": "derecha",
+    "COPTER_RESET_LOCAL_POSITION": "Restablecer posición X e Y",
     "OTTO_MOVE_STYLE_WALK": "Robot bailarín: paso (caminar) %1 pasos %2 duración del paso %3",
     "OTTO_MOVE_STYLE_FLAPPING": "Robot bailarín: paso (aleteo) %1 pasos %2 duración %3 altura %4",
     "OTTO_MOVE_STYLE_CRUSAITO": "Robot bailarín: paso (crusaito) %1 pasos %2 duración %3 altura %4",
@@ -5459,6 +5462,7 @@ Blockly.ScratchMsgs.locales["es-419"] =
     "COPTER_SPEED": "velocidad (m/s)",
     "COPTER_TURN_SIDE_LEFT": "izquierda",
     "COPTER_TURN_SIDE_RIGHT": "derecha",
+    "COPTER_RESET_LOCAL_POSITION": "Restablecer posición X e Y",
     "OTTO_MOVE_STYLE_WALK": "Robot bailarín: paso (caminar) %1 pasos %2 duración del paso %3",
     "OTTO_MOVE_STYLE_FLAPPING": "Robot bailarín: paso (aleteo) %1 pasos %2 duración %3 altura %4",
     "OTTO_MOVE_STYLE_CRUSAITO": "Robot bailarín: paso (crusaito) %1 pasos %2 duración %3 altura %4",
@@ -13288,6 +13292,7 @@ Blockly.ScratchMsgs.locales["ru"] =
 "COPTER_SPEED":"скорость (м/с)",
 "COPTER_TURN_SIDE_LEFT":"влево",
 "COPTER_TURN_SIDE_RIGHT":"вправо",
+"COPTER_RESET_LOCAL_POSITION":"Обнулить положение по X и Y",
 
 
 
@@ -14686,6 +14691,7 @@ Blockly.ScratchMsgs.locales["fi"] =
 "COPTER_SPEED":"speed (m/s)",
 "COPTER_TURN_SIDE_LEFT":"left",
 "COPTER_TURN_SIDE_RIGHT":"right",
+"COPTER_RESET_LOCAL_POSITION":"Reset X and Y position",
 
 
 ///////////////////////////////////////////
@@ -16338,6 +16344,7 @@ Blockly.ScratchMsgs.locales["zh-cn"] =
     "COPTER_SPEED":"速度 (米/秒)",
     "COPTER_TURN_SIDE_LEFT":"向左",
     "COPTER_TURN_SIDE_RIGHT":"向右",
+    "COPTER_RESET_LOCAL_POSITION":"将 X/Y 位置归零",
     
     
     

@@ -138,6 +138,7 @@
   "COPTER_SPEED": "velocidad (m/s)",
   "COPTER_TURN_SIDE_LEFT": "izquierda",
   "COPTER_TURN_SIDE_RIGHT": "derecha",
+  "COPTER_RESET_LOCAL_POSITION": "Restablecer posición X e Y",
   "OTTO_MOVE_STYLE_WALK": "Robot bailarín: paso (caminar) %1 pasos %2 duración del paso %3",
   "OTTO_MOVE_STYLE_FLAPPING": "Robot bailarín: paso (aleteo) %1 pasos %2 duración %3 altura %4",
   "OTTO_MOVE_STYLE_CRUSAITO": "Robot bailarín: paso (crusaito) %1 pasos %2 duración %3 altura %4",
