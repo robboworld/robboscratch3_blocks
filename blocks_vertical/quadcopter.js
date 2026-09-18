@@ -9,8 +9,6 @@ goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
 
 
-
-
 Blockly.Blocks['copter_fly_up'] = {
   /**
    * Block to fly up.
@@ -388,7 +386,7 @@ Blockly.Blocks['copter_turn_sides'] = {
 
 Blockly.Blocks['copter_directions'] = {
   /**
-   * Block to motors off.
+   * Relative flight direction dropdown (same pattern as robot_directions).
    * @this Blockly.Block
    */
   init: function(locale) {
@@ -400,12 +398,12 @@ Blockly.Blocks['copter_directions'] = {
           "type": "field_dropdown",
           "name": "COPTER_DIRECTIONS",
           "options": [
-            [Blockly.Msg.COPTER_DIRECTION_FORWARD, Blockly.Msg.COPTER_DIRECTION_FORWARD],
-            [Blockly.Msg.COPTER_DIRECTION_BACKWARD, Blockly.Msg.COPTER_DIRECTION_BACKWARD],
-            [Blockly.Msg.COPTER_DIRECTION_LEFT, Blockly.Msg.COPTER_DIRECTION_LEFT],
-            [Blockly.Msg.COPTER_DIRECTION_RIGHT, Blockly.Msg.COPTER_DIRECTION_RIGHT],
-            [Blockly.Msg.COPTER_DIRECTION_UP, Blockly.Msg.COPTER_DIRECTION_UP],
-            [Blockly.Msg.COPTER_DIRECTION_DOWN, Blockly.Msg.COPTER_DIRECTION_DOWN]
+            [Blockly.Msg.COPTER_DIRECTION_FORWARD,  'direction_forward'],
+            [Blockly.Msg.COPTER_DIRECTION_BACKWARD, 'direction_backward'],
+            [Blockly.Msg.COPTER_DIRECTION_LEFT,     'direction_left'],
+            [Blockly.Msg.COPTER_DIRECTION_RIGHT,    'direction_right'],
+            [Blockly.Msg.COPTER_DIRECTION_UP,       'direction_up'],
+            [Blockly.Msg.COPTER_DIRECTION_DOWN,     'direction_down']
           ]
         }
       ],
