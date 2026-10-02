@@ -40,6 +40,7 @@ if sys.version_info[0] < 3:
                   "You are using: " + sys.version)
 
 import errno
+import functools
 import glob
 import http.client
 import importlib
@@ -61,7 +62,7 @@ CLOSURE_COMPILER = REMOTE_COMPILER
 CLOSURE_DIR_NPM = "node_modules"
 CLOSURE_ROOT_NPM = os.path.join("node_modules")
 CLOSURE_LIBRARY_NPM = "google-closure-library"
-CLOSURE_COMPILER_NPM = "google-closure-compiler"
+CLOSURE_COMPILER_NPM = ("google-closure-compiler.cmd" if os.name == "nt" else "google-closure-compiler")
 
 VENDORED_CLOSURE_LIBRARY = "closure-library"
 
@@ -285,7 +286,7 @@ if (isNodeJS) {
 
     key_whitelist = self.closure_env.keys()
 
-    keys_pipe_separated = reduce(lambda accum, key: accum + "|" + key, key_whitelist)
+    keys_pipe_separated = functools.reduce(lambda accum, key: accum + "|" + key, key_whitelist)
     begin_brace = re.compile(r"\{(?!%s)" % (keys_pipe_separated,))
 
     end_brace = re.compile(r"\}")
@@ -367,6 +368,10 @@ class Gen_compressed(BuildThread):
     elif block_type == "common":
       target_filename = "blocks_compressed.js"
       filenames = glob.glob(os.path.join("blocks_common", "*.js"))
+
+    # glob.glob ordering is platform-dependent and not necessary deterministic
+    filenames.sort()  # Deterministic build.
+
     srcs = list(filenames)
     srcs.append(os.path.join("build", "gen_blocks.js"))
     srcs.append(os.path.join("core", "colours.js"))
@@ -385,6 +390,7 @@ class Gen_compressed(BuildThread):
     # Add Blockly.Colours for use of centralized colour bank
     filenames.append(os.path.join("core", "colours.js"))
     filenames.append(os.path.join("core", "constants.js"))
+
     for filename in filenames:
       # Append filenames as false arguments the step before compiling will
       # either transform them into arguments for local or remote compilation
@@ -419,7 +425,7 @@ class Gen_compressed(BuildThread):
         if pair[0][2:] not in filter_keys:
           dash_args.extend(pair)
 
-      # Build the final args array by prepending google-closure-compiler to
+      # Build the final args array by prepending CLOSURE_COMPILER_NPM to
       # dash_args and dropping any falsy members
       args = []
       for group in [npm_closure_compiler_argv(), dash_args]:
@@ -435,7 +441,7 @@ class Gen_compressed(BuildThread):
       return dict(
         compiledCode=stdout,
         statistics=dict(
-          originalSize=reduce(lambda v, size: v + size, filesizes, 0),
+          originalSize=functools.reduce(lambda v, size: v + size, filesizes, 0),
           compressedSize=len(stdout),
         )
       )
@@ -474,7 +480,8 @@ class Gen_compressed(BuildThread):
       conn = http.client.HTTPSConnection("closure-compiler.appspot.com")
       conn.request("POST", "/compile", urlencode(remoteParams), headers)
       response = conn.getresponse()
-      json_str = response.read()
+      # Decode is necessary for Python 3.4 compatibility
+      json_str = response.read().decode("utf-8")
       conn.close()
       if isinstance(json_str, bytes):
         json_str = json_str.decode("utf-8")
@@ -527,7 +534,7 @@ class Gen_compressed(BuildThread):
         print("FATAL ERROR: Compiler did not return compiledCode.")
         sys.exit(1)
 
-      code = HEADER + "\n" + json_data["compiledCode"]
+      code = HEADER + "\n" + json_data["compiledCode"].decode("utf-8")
       code = code.replace(remove, "")
 
       # Trim down Google's (and only Google's) Apache licences.
@@ -601,7 +608,7 @@ class Gen_langfiles(threading.Thread):
           # If a destination file was missing, rebuild.
           return True
       else:
-        print("Error checking file creation times: " + e)
+        print("Error checking file creation times: " + str(e))
 
   def run(self):
     # The files msg/json/{en,qqq,synonyms}.json depend on msg/messages.js.
@@ -679,7 +686,7 @@ if __name__ == "__main__":
       stdout = stdout.decode("utf-8", errors="replace")
     assert stdout == read(os.path.join("build", "test_expect.js"))
 
-    print("Using local compiler: google-closure-compiler ...\n")
+    print("Using local compiler: %s ...\n" % CLOSURE_COMPILER_NPM)
   except (ImportError, AssertionError):
     print("Using remote compiler: closure-compiler.appspot.com ...\n")
 
