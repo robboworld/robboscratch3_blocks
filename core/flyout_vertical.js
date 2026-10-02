@@ -59,13 +59,13 @@ Blockly.VerticalFlyout = function(workspaceOptions) {
   this.horizontalLayout_ = false;
 
   /**
-   * List of checkboxes next to variable blocks.
+   * Map of checkboxes that correspond to monitored blocks.
    * Each element is an object containing the SVG for the checkbox, a boolean
    * for its checked state, and the block the checkbox is associated with.
-   * @type {!Array.<!Object>}
+   * @type {!Object.<string, !Object>}
    * @private
    */
-  this.checkboxes_ = [];
+  this.checkboxes_ = {};
 };
 goog.inherits(Blockly.VerticalFlyout, Blockly.Flyout);
 
@@ -86,7 +86,14 @@ Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 250;
  * @type {number}
  * @const
  */
-Blockly.VerticalFlyout.prototype.CHECKBOX_SIZE = 20;
+Blockly.VerticalFlyout.prototype.CHECKBOX_SIZE = 25;
+
+/**
+ * Amount of touchable padding around reporter checkboxes.
+ * @type {number}
+ * @const
+ */
+Blockly.VerticalFlyout.prototype.CHECKBOX_TOUCH_PADDING = 12;
 
 /**
  * SVG path data for checkmark in checkbox.
@@ -451,11 +458,15 @@ Blockly.VerticalFlyout.prototype.clearOldBlocks_ = function() {
   Blockly.VerticalFlyout.superClass_.clearOldBlocks_.call(this);
 
   // Do the same for checkboxes.
-  for (var i = 0, elem; elem = this.checkboxes_[i]; i++) {
-    elem.block.flyoutCheckbox = null;
-    goog.dom.removeNode(elem.svgRoot);
+  for (var checkboxId in this.checkboxes_) {
+    if (!Object.prototype.hasOwnProperty.call(this.checkboxes_, checkboxId)) {
+      continue;
+    }
+    var checkbox = this.checkboxes_[checkboxId];
+    checkbox.block.flyoutCheckbox = null;
+    goog.dom.removeNode(checkbox.svgRoot);
   }
-  this.checkboxes_ = [];
+  this.checkboxes_ = {};
 };
 
 /**
@@ -597,13 +608,14 @@ Blockly.VerticalFlyout.prototype.createCheckbox_ = function(block, cursorX,
   var extraSpace = this.CHECKBOX_SIZE + this.CHECKBOX_MARGIN;
   var width = this.RTL ? this.getWidth() / this.workspace_.scale - extraSpace : cursorX;
   var height = cursorY + blockHW.height / 2 - this.CHECKBOX_SIZE / 2;
+  var touchMargin = this.CHECKBOX_TOUCH_PADDING;
   var checkboxGroup = Blockly.utils.createSvgElement('g',
       {
-        'class': 'blocklyFlyoutCheckbox',
         'transform': 'translate(' + width + ', ' + height + ')'
       }, null);
   Blockly.utils.createSvgElement('rect',
       {
+        'class': 'blocklyFlyoutCheckbox',
         'height': this.CHECKBOX_SIZE,
         'width': this.CHECKBOX_SIZE,
         'rx': this.CHECKBOX_CORNER_RADIUS,
@@ -614,6 +626,14 @@ Blockly.VerticalFlyout.prototype.createCheckbox_ = function(block, cursorX,
         'class': 'blocklyFlyoutCheckboxPath',
         'd': this.CHECKMARK_PATH
       }, checkboxGroup);
+  Blockly.utils.createSvgElement('rect',
+      {
+        'class': 'blocklyTouchTargetBackground',
+        'x': -touchMargin + 'px',
+        'y': -touchMargin + 'px',
+        'height': this.CHECKBOX_SIZE + 2 * touchMargin,
+        'width': this.CHECKBOX_SIZE + 2 * touchMargin,
+      }, checkboxGroup);
   var checkboxObj = {svgRoot: checkboxGroup, clicked: checkboxState, block: block};
 
   if (checkboxState) {
@@ -622,7 +642,7 @@ Blockly.VerticalFlyout.prototype.createCheckbox_ = function(block, cursorX,
 
   block.flyoutCheckbox = checkboxObj;
   this.workspace_.getCanvas().insertBefore(checkboxGroup, svgRoot);
-  this.checkboxes_.push(checkboxObj);
+  this.checkboxes_[block.id] = checkboxObj;
 };
 
 /**
@@ -649,26 +669,22 @@ Blockly.VerticalFlyout.prototype.checkboxClicked_ = function(checkboxObj) {
  * @public
  */
 Blockly.VerticalFlyout.prototype.setCheckboxState = function(blockId, value) {
-  for (var i = 0; i < this.checkboxes_.length; i++) {
-    var checkboxObj = this.checkboxes_[i];
-    if (checkboxObj.block.id === blockId) {
-      if (checkboxObj.clicked === value) return;
-
-      var oldValue = checkboxObj.clicked;
-      checkboxObj.clicked = value;
-
-      if (checkboxObj.clicked) {
-        Blockly.utils.addClass((checkboxObj.svgRoot), 'checked');
-      } else {
-        Blockly.utils.removeClass((checkboxObj.svgRoot), 'checked');
-      }
-
-      Blockly.Events.fire(new Blockly.Events.Change(
-          checkboxObj.block, 'checkbox', null, oldValue, value));
-
-      return;
-    }
+  var checkboxObj = this.checkboxes_[blockId];
+  if (!checkboxObj || checkboxObj.clicked === value) {
+    return;
   }
+
+  var oldValue = checkboxObj.clicked;
+  checkboxObj.clicked = value;
+
+  if (checkboxObj.clicked) {
+    Blockly.utils.addClass(checkboxObj.svgRoot, 'checked');
+  } else {
+    Blockly.utils.removeClass(checkboxObj.svgRoot, 'checked');
+  }
+
+  Blockly.Events.fire(new Blockly.Events.Change(
+      checkboxObj.block, 'checkbox', null, oldValue, value));
 };
 
 /**

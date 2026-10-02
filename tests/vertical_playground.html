@@ -84,7 +84,7 @@
           zoom: {
             controls: true,
             wheel: true,
-            startScale: 0.75,
+            startScale: 0.675,
             maxScale: 4,
             minScale: 0.25,
             scaleSpeed: 1.1
@@ -133,12 +133,6 @@
         var input = document.getElementById('importExport');
         var xml = Blockly.Xml.textToDom(input.value);
         Blockly.Xml.domToWorkspace(xml, workspace);
-        taChange();
-      }
-
-      function toCode(lang) {
-        var output = document.getElementById('importExport');
-        output.value = Blockly[lang].workspaceToCode(workspace);
         taChange();
       }
 
@@ -538,8 +532,6 @@
       <input type="button" value="Export to XML" onclick="toXml()">
       &nbsp;
       <input type="button" value="Import from XML" onclick="fromXml()" id="import">
-      <br>
-      <input type="button" value="To JavaScript" onclick="toCode('JavaScript')">
       <br>
       <textarea id="importExport" style="width: 26%; height: 12em"
         onchange="taChange();" onkeyup="taChange()"></textarea>

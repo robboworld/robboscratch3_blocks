@@ -112,9 +112,10 @@ Blockly.FieldColourSlider.prototype.setValue = function(colour) {
   }
   this.colour_ = colour;
   if (this.sourceBlock_) {
-    // Set the primary, secondary and tertiary colour to this value.
+    // Set the colours to this value.
     // The renderer expects to be able to use the secondary colour as the fill for a shadow.
-    this.sourceBlock_.setColour(colour, colour, this.sourceBlock_.getColourTertiary());
+    this.sourceBlock_.setColour(colour, colour, this.sourceBlock_.getColourTertiary(),
+        this.sourceBlock_.getColourQuaternary());
   }
   this.updateSliderHandles_();
   this.updateDom_();
@@ -245,19 +246,18 @@ Blockly.FieldColourSlider.prototype.sliderCallbackFactory_ = function(channel) {
   return function(event) {
     if (!thisField.sliderCallbacksEnabled_) return;
     var channelValue = event.target.getValue();
-    var hsv = goog.color.hexToHsv(thisField.getValue());
     switch (channel) {
       case 'hue':
-        hsv[0] = thisField.hue_ = channelValue;
+        thisField.hue_ = channelValue;
         break;
       case 'saturation':
-        hsv[1] = thisField.saturation_ = channelValue;
+        thisField.saturation_ = channelValue;
         break;
       case 'brightness':
-        hsv[2] = thisField.brightness_ = channelValue;
+        thisField.brightness_ = channelValue;
         break;
     }
-    var colour = goog.color.hsvToHex(hsv[0], hsv[1], hsv[2]);
+    var colour = goog.color.hsvToHex(thisField.hue_, thisField.saturation_, thisField.brightness_);
     if (thisField.sourceBlock_) {
       // Call any validation function, and allow it to override.
       colour = thisField.callValidator(colour);
@@ -341,7 +341,7 @@ Blockly.FieldColourSlider.prototype.showEditor_ = function() {
     button.appendChild(image);
     div.appendChild(button);
     Blockly.FieldColourSlider.eyedropperEventData_ =
-        Blockly.bindEventWithChecks_(button, 'mousedown', this,
+        Blockly.bindEventWithChecks_(button, 'click', this,
             this.activateEyedropperInternal_);
   }
 
