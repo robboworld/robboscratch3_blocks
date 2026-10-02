@@ -62,7 +62,7 @@ CLOSURE_COMPILER = REMOTE_COMPILER
 CLOSURE_DIR_NPM = "node_modules"
 CLOSURE_ROOT_NPM = os.path.join("node_modules")
 CLOSURE_LIBRARY_NPM = "google-closure-library"
-CLOSURE_COMPILER_NPM = ("google-closure-compiler.cmd" if os.name == "nt" else "google-closure-compiler")
+CLOSURE_COMPILER_NPM = "google-closure-compiler"
 
 VENDORED_CLOSURE_LIBRARY = "closure-library"
 
@@ -534,7 +534,10 @@ class Gen_compressed(BuildThread):
         print("FATAL ERROR: Compiler did not return compiledCode.")
         sys.exit(1)
 
-      code = HEADER + "\n" + json_data["compiledCode"].decode("utf-8")
+      compiled = json_data["compiledCode"]
+      if isinstance(compiled, bytes):
+        compiled = compiled.decode("utf-8")
+      code = HEADER + "\n" + compiled
       code = code.replace(remove, "")
 
       # Trim down Google's (and only Google's) Apache licences.
