@@ -28,32 +28,38 @@ Blockly.Colours = {
   "iot": {
     "primary": "#383838",    //modified_by_Yaroslav //iot category
     "secondary": "#AAAAAA",
-    "tertiary": "#989898"
+    "tertiary": "#989898",
+    "quaternary": "#989898"
   },
   "newcat": {
     "primary": "#5F9EA0",    //modified_by_Yaroslav //arduino category
     "secondary": "#AAAAAA",
-    "tertiary": "#989898"
+    "tertiary": "#989898",
+    "quaternary": "#989898"
   },
   "otto": {
     "primary": "#5d8c4d",    //modified_by_Yaroslav //otto category
     "secondary": "#AAAAAA",
-    "tertiary": "#989898"
+    "tertiary": "#989898",
+    "quaternary": "#989898"
   },
   "quadcopter": {
     "primary": "#383838",    //modified_by_Yaroslav //quadcoptery category
     "secondary": "#AAAAAA",
-    "tertiary": "#989898"
+    "tertiary": "#989898",
+    "quaternary": "#989898"
   },
   "laboratory": {
     "primary": "#989898",    //modified_by_Yaroslav //laboratory category
     "secondary": "#989898",
-    "tertiary": "#000000"
+    "tertiary": "#000000",
+    "quaternary": "#000000"
   },
   "robot": {
     "primary": "#00AF41",    //modified_by_Yaroslav //robot category
     "secondary": "#AAAAAA",
-    "tertiary": "#00AF41"
+    "tertiary": "#00AF41",
+    "quaternary": "#00AF41"
   },
   "motion": {
     "primary": "#4C97FF",
