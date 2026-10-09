@@ -542,3 +542,111 @@ Blockly.Blocks['copter_speed'] = {
     });
   }
 };
+
+/** `copters [N] do` menu: all copters, then numbers 1..15 (a variable or "1, 3" / "1-3" also works). */
+Blockly.Blocks.quadcopter.copterNumberOptions = function() {
+  var options = [[Blockly.Msg.COPTER_ALL, "all"]];
+  for (var i = 1; i <= 15; i++) {
+    options.push([String(i), String(i)]);
+  }
+  return options;
+};
+
+Blockly.Blocks['copter_copters_menu'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "COPTERS",
+          "options": Blockly.Blocks.quadcopter.copterNumberOptions()
+        }
+      ],
+      "colour": Blockly.Colours.quadcopter.secondary,
+      "colourSecondary": Blockly.Colours.quadcopter.secondary,
+      "colourTertiary": Blockly.Colours.quadcopter.tertiary,
+      "extensions": ["output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_with_copters'] = {
+  /**
+   * C-block: blocks inside drive the selected copter (a number or a variable).
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.COPTER_WITH_COPTERS,
+      "message1": "%1",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "COPTERS"
+        }
+      ],
+      "args1": [
+        {
+          "type": "input_statement",
+          "name": "SUBSTACK"
+        }
+      ],
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_value_of'] = {
+  /**
+   * Reporter: a property of any copter, independent of the selected copter.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.COPTER_VALUE_OF,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PROPERTY",
+          "options": [
+            [Blockly.Msg.COPTER_PROPERTY_X, "x"],
+            [Blockly.Msg.COPTER_PROPERTY_Y, "y"],
+            [Blockly.Msg.COPTER_PROPERTY_Z, "z"],
+            [Blockly.Msg.COPTER_PROPERTY_YAW, "yaw"],
+            [Blockly.Msg.COPTER_PROPERTY_BATTERY, "battery"],
+            [Blockly.Msg.COPTER_PROPERTY_FLYING, "flying"],
+            [Blockly.Msg.COPTER_PROPERTY_LINK, "link"]
+          ]
+        },
+        {
+          "type": "input_value",
+          "name": "COPTER"
+        }
+      ],
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['copter_charge_battery'] = {
+  /**
+   * Simulator: set the copter battery level (a real battery charges on its charger).
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.COPTER_CHARGE_BATTERY,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "PERCENT"
+        }
+      ],
+      "category": Blockly.Categories.quadcopter,
+      "extensions": ["colours_quadcopter", "shape_statement"]
+    });
+  }
+};
