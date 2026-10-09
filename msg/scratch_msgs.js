@@ -20951,9 +20951,9 @@ Blockly.ScratchMsgs.locales["ru"] =
 
 
 "CATEGORY_OTTO": "Танцующий робот",
-"CATEGORY_QUADCOPTER": "Квадрокоптер",
+"CATEGORY_QUADCOPTER": "Квадро\u00adкоптер",
 "CATEGORY_ROBOT": "Робот",
-"CATEGORY_LABORATORY": "Лаборатория",
+"CATEGORY_LABORATORY": "Лабора\u00adтория",
 "CATEGORY_ARDUINO":"Ардуино",
 "CATEGORY_IOT": "Интернет вещей"
 
